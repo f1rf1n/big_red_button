@@ -1,5 +1,5 @@
 {
-    "name": "big_red_button",
+    "name": "firfin/big_red_button",
     "type": "drupal-module",
     "description": "Provides 'the Nuclear option' for webshops with migrated products. For when you want to start clean.",
     "keywords": [ "commerce", "migration"],
