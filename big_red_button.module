@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Contains big_red_button.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function big_red_button_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the big_red_button module.
+    case 'help.page.big_red_button':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides &#039;&#039;the Nuclear option&#039;&#039; for webshops with migrated products. For when you want to start clean.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function big_red_button_theme() {
+  return [
+    'big_red_button' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Function that actually truncate the database tables.
+ *
+ */
+function trumpGate() {
+  $tables = ['commerce_product', 'commerce_product_attribute_value', 'commerce_product_attribute_value_field_data', 'commerce_product__body', 'commerce_product__field_category', 'commerce_product_field_data', 'commerce_product__field_images', 'commerce_product__field_related_products', 'commerce_product__field_reviews', 'commerce_product__field_sorteergewicht', 'commerce_product__field_weight', 'commerce_product__stores', 'commerce_product_variation', 'commerce_product_variation_field_data', 'commerce_product__variations', 'migrate_map_product', 'migrate_map_products', 'migrate_map_verkoop_producttype', 'migrate_map_verkoop_productvars', 'migrate_message_product', 'migrate_message_products', 'migrate_message_verkoop_producttype', 'migrate_message_verkoop_productvars'];
+  foreach ($tables as $index => $table) {
+    \Drupal::database()->truncate($table)->execute();
+  }
+  \Drupal::messenger()->addMessage(" Gone! It's all gone!" );
+}
+

@@ -1,0 +1,5 @@
+name: 'Big Red Button'
+type: module
+description: 'Provides ''the Nuclear option'' for webshops with migrated products. For when you want to start clean.'
+core: 8.x
+package: 'Custom'

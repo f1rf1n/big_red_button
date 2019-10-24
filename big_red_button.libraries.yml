@@ -1,0 +1,9 @@
+blinky-button:
+  version: 0.1
+  css:
+    theme:
+      css/big_red_button.theme.css: {}
+  js:
+    js/big-red-button.js: {}
+  dependencies:
+    - core/jquery
