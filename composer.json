@@ -8,6 +8,6 @@
     "minimum-stability": "dev",
     "support": {
         "issues": "https://www.drupal.org/project/issues/big_red_button",
-        "source": "http://cgit.drupalcode.org/big_red_button",
-    },
+        "source": "http://cgit.drupalcode.org/big_red_button"
+    }
 }
