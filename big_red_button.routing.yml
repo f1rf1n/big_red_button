@@ -1,11 +1,4 @@
 
-big_red_button.default_controller_press:
-  path: '/big_red_button/press'
-  defaults:
-    _controller: '\Drupal\big_red_button\Controller\DefaultController::press'
-    _title: 'button page'
-  requirements:
-    _permission: 'access content'
 big_red_button.default_form:
   path: '/big_red_button'
   defaults:

@@ -59,6 +59,7 @@ class DefaultForm extends FormBase {
       '#title' => $this->t('Don&#039;t PUSH it'),
       '#description' => $this->t('Button that wipes the stores&#039; products and migrations'),
       '#weight' => '0',
+      '#attributes' => [ 'class' => [ 'img-responsive']],
 //    ];
 //    $form['submit'] = [
 //      '#type' => 'submit',
